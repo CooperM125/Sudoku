@@ -1,2 +1,3 @@
 #Sudoku-Solver
-Trying to add a repo from command line.
+This is working on my project from command line push.
+Project description. 
