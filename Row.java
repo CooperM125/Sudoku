@@ -2,7 +2,7 @@
 public class Row {
 	Square[] row;
 	int[] list;
-	int[] coordinate ; // where the first cell is
+	int[] coordinate ; // where the first cell is from left or top. 
 	boolean isVertical;
 	int size;
 
@@ -62,7 +62,5 @@ public class Row {
 		
 		return numsUsed; 
 	}
-	
-	
 	
 }

@@ -4,7 +4,7 @@
  */
 
 public class Board {
-	int size = 4;
+	int size = 3;
 	Square[][] board;
 
 	Board(int size) {
@@ -12,21 +12,8 @@ public class Board {
 		board = new Square[getSize()][getSize()];
 		
 	}
-	
-	
-	
-	public void inputBoardAsArray(int[][] array) { 
-		for(int row = 0;row < getSize();row++) {
-			for (int col = 0; col < getSize();col++) {
-				board[col][row] = new Square(array[row][col]); // took a while to fix. 			 
-				
-			}
-		}
-	}
-		
-		
-	
-	
+
+	/*=== Behavor ===*/
 	public void print() {  // print out board.
 		for(int row = 0; row < size;row++) {
 			for (int col = 0; col < size;col++) {
@@ -41,7 +28,8 @@ public class Board {
 			System.out.println();
 		}
 	}
-	
+
+	// Should there be a slover object? (No) 
 	public void solveByRowX(int col,int row) {
 		// solve by looking at numbers horizontal.
 		// remove numbers from posNum if already in row.
@@ -53,18 +41,32 @@ public class Board {
 	public void solveByBlock(int col,int row) {
 		// look at numbers in block and remove from posNum. 
 	}
-		
-	
-	
-	
+
+	/*=== Get Functions===*/
 	public int getSize() {
 		return size;
 	}
+
+	/*=== Set Functions===*/
+	public void inputBoardAsArray(int[][] array) { 
+		for(int row = 0;row < getSize();row++) {
+			for (int col = 0; col < getSize();col++) {
+				board[col][row] = new Square(array[row][col]); // took a while to fix. 			 
+				
+			}
+		}
+	}
+	public void setSquareValue(int x,int y,int val){
+		board[x][y].setNum(val);
+	}
+	public int getSize() {
+		return size;
+	}
+
+
 	public void setSize(int size) {
 		this.size = size;
 	}
-	
-	
 	
 }
 
